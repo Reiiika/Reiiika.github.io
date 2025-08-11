@@ -1,169 +1,346 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>オンライン秘書ポートフォリオ | れいか</title>
-  <style>
-    body {
-      font-family: "Hiragino Sans", "Meiryo", sans-serif;
-      margin: 0;
-      background-color: #f7faff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #4a90e2, #6fb1fc);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: #4a90e2;
-      border-left: 5px solid #4a90e2;
-      padding-left: 10px;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 5px;
-    }
-    .flow ol {
-      padding-left: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #4a90e2;
-      color: white;
-      margin-top: 40px;
-    }
-    a {
-      color: #4a90e2;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webサイト制作サービス - あなたのビジネスをオンラインに</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-code text-2xl"></i>
+                    <h1 class="text-2xl font-bold">WebCraft Pro</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#services" class="hover:text-blue-200 transition">サービス</a>
+                    <a href="#target" class="hover:text-blue-200 transition">対象者</a>
+                    <a href="#features" class="hover:text-blue-200 transition">サービス内容</a>
+                    <a href="#contact" class="hover:text-blue-200 transition">お問い合わせ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-  <!-- トップ -->
-  <header>
-    <h1>ITと事務の両輪で、あなたのビジネスを加速させます。</h1>
-    <p>スケジュール管理・資料作成・経理補助まで、オンラインで幅広く対応。<br>
-    「やらなければならないこと」を減らし、「やりたいこと」に集中できる時間を創ります。</p>
-  </header>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">
+                あなたのビジネスを<br>
+                <span class="text-yellow-300">オンラインに</span>
+            </h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                個人事業主・店舗経営者様向けの高品質なホームページ制作サービス。<br>
+                プロフェッショナルなWebサイトで、あなたのビジネスの可能性を広げます。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="bg-white text-purple-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    無料相談はこちら
+                </a>
+                <div class="flex items-center text-yellow-300">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span class="font-semibold">お見積もり無料</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 実績・経験 -->
-  <section>
-    <h2>実績・経験</h2>
-    <h3>業務経験</h3>
-    <ul>
-      <li>IT業界での運用保守業務：5年（スケジュール管理・マニュアル作成・課題管理）</li>
-      <li>税理士法人での経理補助：1年3ヶ月（法人税・消費税申告補助、記帳代行）</li>
-    </ul>
-    <h3>対応案件例</h3>
-    <ul>
-      <li>スケジュール調整、議事録作成</li>
-      <li>請求書発行・経理データ入力</li>
-      <li>資料作成（Word／Excel／PowerPoint）</li>
-    </ul>
-    <h3>実績の一部</h3>
-    <ul>
-      <li>月30件以上の案件を納期遅延ゼロで対応</li>
-      <li>新規ツール導入により、業務効率を20％向上</li>
-    </ul>
-  </section>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">サービス内容</h2>
+                <p class="text-gray-600 text-lg">幅広いWebサービスでお客様のニーズにお応えします</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg card-shadow text-center">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Webサイト修正</h3>
+                    <p class="text-gray-600">既存サイトの改善・修正・アップデートを承ります</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg card-shadow text-center">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">個人事業のホームページ</h3>
+                    <p class="text-gray-600">フリーランス・個人事業主様向けのプロフェッショナルサイト</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg card-shadow text-center">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">店舗のホームページ</h3>
+                    <p class="text-gray-600">レストラン・美容室・小売店など店舗向けサイト</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg card-shadow text-center">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">LP制作</h3>
+                    <p class="text-gray-600">コンバージョン重視のランディングページ制作</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- サービス内容 -->
-  <section>
-    <h2>サービス内容</h2>
-    <h3>提供業務</h3>
-    <ul>
-      <li>事務サポート：スケジュール管理、メール対応、議事録作成</li>
-      <li>経理サポート：請求書発行、記帳代行、領収書整理</li>
-      <li>ITサポート：ツール設定、データ管理、Googleスプレッドシート作成</li>
-    </ul>
-    <h3>対応可能ツール</h3>
-    <p>Google Workspace / Microsoft 365 / Slack / Chatwork / Notion / Zoom / Canva</p>
-    <h3>料金（目安）</h3>
-    <ul>
-      <li>時給：1,200円〜</li>
-      <li>月額契約：10時間〜（詳細はご相談ください）</li>
-    </ul>
-    <div class="flow">
-      <h3>契約の流れ</h3>
-      <ol>
-        <li>お問い合わせ</li>
-        <li>ヒアリング（オンライン）</li>
-        <li>ご提案・お見積もり</li>
-        <li>契約</li>
-        <li>業務開始</li>
-      </ol>
-    </div>
-  </section>
+    <!-- Target Audience Section -->
+    <section id="target" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">こんな方におすすめです</h2>
+                <p class="text-gray-600 text-lg">以下のような状況の方に最適なサービスです</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg card-shadow">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl feature-icon mt-1">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">事業をはじめたばかりでまだホームページがない</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                新規開業・起業されたばかりで、まだオンラインでの存在感がない方。
+                                お客様に信頼していただけるプロフェッショナルなWebサイトを構築いたします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg card-shadow">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl feature-icon mt-1">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">名刺代わりにホームページが必要</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                営業活動や商談の際に、信頼性を高める名刺代わりのWebサイトが欲しい方。
+                                シンプルで分かりやすく、あなたのビジネスを効果的にアピールします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 自己紹介 -->
-  <section>
-    <h2>自己紹介</h2>
-    <p>はじめまして、れいかと申します。<br>
-    IT業界と経理業務の経験を活かし、事務とITの両面からお客様をサポートします。<br>
-    正確さとスピード、そして円滑なコミュニケーションを大切にしています。</p>
-    <h3>強み</h3>
-    <ul>
-      <li>ITツールの活用による効率化</li>
-      <li>納期厳守のスケジュール管理</li>
-      <li>分かりやすい資料作成</li>
-    </ul>
-  </section>
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">サービスに含まれる内容</h2>
+                <p class="text-gray-600 text-lg">充実した機能とサポートで、完成度の高いWebサイトをお届けします</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">トップページを含め4ページまで</h3>
+                    <p class="text-gray-600">ホーム・サービス・会社概要・お問い合わせなど、必要なページを効果的に構成</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">一般的なSEO内部対策</h3>
+                    <p class="text-gray-600">検索エンジンで見つけてもらいやすくする基本的なSEO設定を実施</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">スマホ・タブレット対応</h3>
+                    <p class="text-gray-600">どんなデバイスでも美しく表示されるレスポンシブデザイン</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">SSL対応</h3>
+                    <p class="text-gray-600">安全な通信を保証するSSL証明書の設定でセキュリティを強化</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">お問い合わせフォーム</h3>
+                    <p class="text-gray-600">お客様からの問い合わせを受け取るためのカスタマイズ可能なフォーム</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl feature-icon mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">各種埋め込み対応</h3>
+                    <p class="text-gray-600">Googleマップ・YouTube動画・SNSの投稿などを効果的に配置</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 資格・スキル -->
-  <section>
-    <h2>資格・スキル</h2>
-    <ul>
-      <li>日商簿記2級</li>
-      <li>TOEIC 805点</li>
-      <li>ITパスポート</li>
-    </ul>
-  </section>
+    <!-- Process Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">制作の流れ</h2>
+                <p class="text-gray-600 text-lg">お客様とのコミュニケーションを大切に、スムーズな制作を進めます</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">1</div>
+                    <h3 class="text-lg font-semibold mb-2">ヒアリング</h3>
+                    <p class="text-gray-600 text-sm">ご要望・目的・イメージをお聞かせください</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">2</div>
+                    <h3 class="text-lg font-semibold mb-2">企画・設計</h3>
+                    <p class="text-gray-600 text-sm">サイト構成とデザインの方向性を決定</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">3</div>
+                    <h3 class="text-lg font-semibold mb-2">制作・開発</h3>
+                    <p class="text-gray-600 text-sm">デザイン・コーディング・機能実装</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">4</div>
+                    <h3 class="text-lg font-semibold mb-2">納品・公開</h3>
+                    <p class="text-gray-600 text-sm">最終確認後、Webサイトを公開</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- お問い合わせ -->
-  <section>
-    <h2>お問い合わせ</h2>
-    <p>お仕事のご依頼・ご相談はこちらからどうぞ。</p>
-    <ul>
-      <li>お問い合わせフォーム：<a href="#">リンク</a></li>
-      <li>メール：<a href="mailto:sample@example.com">sample@example.com</a></li>
-      <li>SNS：<a href="#">LinkedIn</a> / <a href="#">X</a></li>
-    </ul>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">お問い合わせ</h2>
+                <p class="text-gray-600 text-lg">お気軽にご相談ください。無料でお見積もりいたします</p>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <form class="bg-gray-50 p-8 rounded-lg card-shadow">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">お名前 *</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">会社名・屋号</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">メールアドレス *</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">電話番号</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">ご希望サービス</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option>選択してください</option>
+                            <option>個人事業のホームページ</option>
+                            <option>店舗のホームページ</option>
+                            <option>LP制作</option>
+                            <option>Webサイト修正</option>
+                            <option>その他・複数選択</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">ご相談内容</label>
+                        <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="プロジェクトの詳細、ご要望、ご予算、希望スケジュールなど、お聞かせください"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition inline-flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            送信する
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 れいか All Rights Reserved.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-code text-2xl"></i>
+                        <h3 class="text-2xl font-bold">WebCraft Pro</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        個人事業主・店舗経営者様向けのプロフェッショナルなホームページ制作サービス。
+                        あなたのビジネスの成長をWebサイトでサポートいたします。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>個人事業のホームページ</li>
+                        <li>店舗のホームページ</li>
+                        <li>LP制作</li>
+                        <li>Webサイト修正</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">お問い合わせ</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@webcraft-pro.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>03-1234-5678</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>平日 9:00-18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 WebCraft Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
